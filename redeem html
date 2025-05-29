@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Tukar Koin</title></head>
+<body>
+    <h2>Tukar Koin - {{ user.name }}</h2>
+    <p>Koin tersedia: {{ user.coins }}</p>
+    <form method="post">
+        Jumlah koin: <input type="number" name="amount" min="1" max="{{ user.coins }}">
+        <input type="submit" value="Tukar">
+    </form>
+    <a href="{{ url_for('dashboard') }}">Kembali</a>
+</body>
+</html>
